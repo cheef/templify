@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source :rubygems
 
-# Specify your gem's dependencies in templify.gemspec
+gem 'rails', '~> 3.0'
 gemspec
