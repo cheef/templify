@@ -8,6 +8,10 @@ class Templify::Base < String
 
   self.variables = []
 
+  def initialize value = ''
+    super value.to_s
+  end
+
   def self.desc text = nil
     if text
       self.desc = text
@@ -29,5 +33,9 @@ class Templify::Base < String
 
   def % variables
     super
+  end
+
+  def variable_names
+    self.class.variables.map(&:name)
   end
 end

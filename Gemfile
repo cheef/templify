@@ -1,4 +1,4 @@
 source :rubygems
 
-gem 'rails', '~> 3.0'
 gemspec
+eval_gemfile 'spec/dummy/Gemfile'

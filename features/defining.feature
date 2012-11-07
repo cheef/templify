@@ -3,7 +3,7 @@ Feature: I want to define my template and describe what variables it should have
   Scenario: define template without variables
     When I define empty template like below:
     """
-    class MyTemplate < Templify::Base
+    class MyEmptyTemplate < Templify::Base
     end
     """
     Then no errors should be raised
@@ -12,7 +12,7 @@ Feature: I want to define my template and describe what variables it should have
   Scenario: define template with several variables
     When I define template like below:
     """
-    class MyTemplate < Templify::Base
+    class MyDefinedTemplate < Templify::Base
       desc %(This is first variable of my template)
       variable :foo
 
@@ -23,4 +23,4 @@ Feature: I want to define my template and describe what variables it should have
     end
     """
     Then no errors should be raised
-    And "MyTemplate" template should have 3 variables
+    And "MyDefinedTemplate" template should have 3 variables

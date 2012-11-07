@@ -7,6 +7,6 @@ module Templify
   autoload :Version,  'templify/version'
 end
 
-if defined? Rails::Railtie
+if defined? Rails
   require 'templify/railtie'
 end
